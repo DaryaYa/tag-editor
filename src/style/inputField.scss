@@ -1,0 +1,46 @@
+@import "main";
+@import "reset";
+
+.create-form{
+  position: relative;
+    width: 60%;
+    display: flex;
+    flex-direction: column;  
+}
+
+.create-form__input{
+    border-radius: 40px;
+    padding: 1em 2em;
+    font-size: large;
+    border: none;
+    outline: none;
+    box-shadow: inset 0 0 1em black;
+    background-color: $white;
+
+     &:focus {
+        box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5), inset 0 0 .5em $green;
+    }
+}
+
+.create-form__submit{
+    position: absolute;
+    top: 10%;
+    right: .3em;
+    border-radius: 100%;
+    padding: 1em;
+    box-shadow: inset 0 0 1em $green;
+    transition: 1s all;
+
+    &:hover{
+        background-color: $green;
+        color: $white;
+        box-shadow: inset 0 0 1em $white;
+        transition: 1s all;
+    }
+
+    &:active{
+        transform: scale(.8);
+        box-shadow: inset 0 0 .5em $white;
+        transition: .5s all;
+    } 
+}

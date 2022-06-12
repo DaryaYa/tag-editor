@@ -1,0 +1,38 @@
+@import "main";
+
+.single-note {
+    background-color: $yellow;
+    font-size: 2em;
+    // margin-top: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    // margin-left: .5em;
+    margin: auto;
+    border-radius: 20px;
+    padding: .5em;
+    box-shadow: inset 0 0 1em black;
+}
+
+.note__buttons {
+    display: flex;
+    // flex-wrap: wrap;
+    align-content: center;
+    margin-left: 0.3em;
+    align-items: center;
+}
+
+.note__icon {
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: $dark-yellow;
+    &:hover {
+    cursor: pointer;    
+    }
+}
+
+.note_edit{
+    background-color: $yellow;
+    outline: none;
+    border: none;
+}

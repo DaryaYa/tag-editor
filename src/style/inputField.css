@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+.create-form {
+  position: relative;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.create-form__input {
+  border-radius: 40px;
+  padding: 1em 2em;
+  font-size: large;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: inset 0 0 1em black;
+          box-shadow: inset 0 0 1em black;
+  background-color: #faebd7;
+}
+
+.create-form__input:focus {
+  -webkit-box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5), inset 0 0 0.5em #0c2c0c;
+          box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5), inset 0 0 0.5em #0c2c0c;
+}
+
+.create-form__submit {
+  position: absolute;
+  top: 10%;
+  right: .3em;
+  border-radius: 100%;
+  padding: 1em;
+  -webkit-box-shadow: inset 0 0 1em #0c2c0c;
+          box-shadow: inset 0 0 1em #0c2c0c;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+.create-form__submit:hover {
+  background-color: #0c2c0c;
+  color: #faebd7;
+  -webkit-box-shadow: inset 0 0 1em #faebd7;
+          box-shadow: inset 0 0 1em #faebd7;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+.create-form__submit:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-box-shadow: inset 0 0 0.5em #faebd7;
+          box-shadow: inset 0 0 0.5em #faebd7;
+  -webkit-transition: .5s all;
+  transition: .5s all;
+}
+/*# sourceMappingURL=inputField.css.map */

@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import InputField from './components/InputField';
+import NoteList from './components/NoteList';
+import { Note } from './components/model';
 
-function App() {
+const App: React.FC = () => {
+
+  const [note, setNote] = useState<string>('');
+  const [notesArray, setNotesArray] = useState<Note[]>([]);
+
+  const handleAdd = (e: React.FormEvent): void => {
+    e.preventDefault();
+
+    if(note) {
+      setNotesArray([...notesArray, {id: Date.now(), note}]);
+      setNote('');
+    }
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="header">
+        <h1>List of Notes</h1>      
+      </div>
+       <InputField note={note} setNote={setNote} handleAdd={handleAdd} />
+       <NoteList notesArray={notesArray} setNotesArray={setNotesArray} />
     </div>
   );
 }

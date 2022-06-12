@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACT,UAAU,EAAE,GAAG;CAClB",
+    "sources": [
+        "noteList.scss"
+    ],
+    "names": [],
+    "file": "noteList.css"
+}

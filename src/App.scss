@@ -1,0 +1,23 @@
+@import "style/reset";
+@import "style/main";
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $green;
+   font-family: 'Dancing Script', cursive; 
+}
+
+.header {
+    margin: 20px auto;
+    font-size: 2em;
+    color: $white;
+    border-bottom: 2px dashed $white;
+}
+
+h1 {
+    margin-bottom: .5rem;
+}
