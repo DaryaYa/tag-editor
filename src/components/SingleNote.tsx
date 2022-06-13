@@ -23,7 +23,7 @@ const SingleNote: React.FC<OneNote> = ({ note, notesArray, setNotesArray }) => {
 
         setNotesArray(notesArray.map(note => note.id === id ? {...note, note:editText} : note ));
         setEdit(false);
-    }
+    };
 
     return (
         <form className="single-note" onSubmit={(e)=>{handleEdit(e, note.id)}}>
