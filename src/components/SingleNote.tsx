@@ -9,29 +9,38 @@ interface OneNote extends Notes {
     note: Note;
 }
 
-const SingleNote: React.FC<OneNote> = ({ note, notesArray, setNotesArray }) => {
+const SingleNote: React.FC<OneNote> = ({ note, notesArray, setNotesArray, tags, setTags }) => {
 
     const [edit, setEdit] = useState<boolean>(false);
     const [editText, setEditText] = useState<string>(note.note);
 
-    const handleDelete = (id: number) => {
+    const handleDelete = (id: string) => {
         setNotesArray(notesArray.filter(note => note.id !== id));
     };
 
-    const handleEdit = (e: React.FormEvent, id: number) =>{
+    const handleEdit = (e: React.FormEvent, id: string) =>{
         e.preventDefault();
 
         setNotesArray(notesArray.map(note => note.id === id ? {...note, note:editText} : note ));
         setEdit(false);
     };
 
+    // const editNote = (e: React.ChangeEvent<HTMLInputElement>) => {
+    //     setEditText(e.currentTarget.value);
+    // }
+
     return (
         <form className="single-note" onSubmit={(e)=>{handleEdit(e, note.id)}}>
             {
                 edit ? (
-                    <input className="note_edit" value={editText} onChange={(e)=> setEditText(e.target.value)} />
+                    <input className="note_edit" value={editText} onChange={(e: React.ChangeEvent<HTMLInputElement> )=> {
+                        setEditText(e.currentTarget.value);
+                    }}/>
                 ) : 
-                    <div className="note__text">{note.note}</div>           
+                    <div className="note__text">{(note.note).split(' ').map((el, ind) =>{
+                       return <span className="note__item" key={ind}>{`${el} `}</span>
+                    })
+                    }</div>           
             }
             
             <div className="note__buttons">

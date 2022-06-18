@@ -1,9 +1,9 @@
 export interface Note{
-    id: number;
+    id: string;
     note: string;
 };
 
 export interface Tag{
-    id: number;
-    tag: string;
+    id?: string;
+    tag?: string;
 };

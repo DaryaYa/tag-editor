@@ -1,1 +1,23 @@
-/* No CSS *//*# sourceMappingURL=tagList.css.map */
+.tag-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.tag__item {
+  border: 1px solid black;
+  border-radius: 25px;
+  background-color: #966e0a;
+  padding: .5em;
+  font-family: cursive;
+  font-weight: 600;
+}
+
+.tag__icon {
+  color: #faebd7;
+}
+/*# sourceMappingURL=tagList.css.map */
