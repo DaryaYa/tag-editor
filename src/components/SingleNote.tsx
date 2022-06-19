@@ -16,6 +16,7 @@ const SingleNote: React.FC<OneNote> = ({ note, notesArray, setNotesArray, tags, 
 
     const handleDelete = (id: string) => {
         setNotesArray(notesArray.filter(note => note.id !== id));
+        setTags(tags.filter(tag => tag.id !== id));
     };
 
     const handleEdit = (e: React.FormEvent, id: string) =>{
@@ -24,10 +25,6 @@ const SingleNote: React.FC<OneNote> = ({ note, notesArray, setNotesArray, tags, 
         setNotesArray(notesArray.map(note => note.id === id ? {...note, note:editText} : note ));
         setEdit(false);
     };
-
-    // const editNote = (e: React.ChangeEvent<HTMLInputElement>) => {
-    //     setEditText(e.currentTarget.value);
-    // }
 
     return (
         <form className="single-note" onSubmit={(e)=>{handleEdit(e, note.id)}}>
