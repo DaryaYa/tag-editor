@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Tag, Note } from './model';
 import '../style/tagList.css';
 import { BiXCircle } from "react-icons/bi";
